@@ -7,18 +7,18 @@ console.log(chalk.magenta("Welcome "+ name+ " To ****ANIME QUIZ ***"))
 
 
 
-var scores= [{
-  name:"Akshay",
-  score:4
-},{
-  name:"Aditya",
-  score:3
-}]
+// var scores= [{
+//   name:"Akshay",
+//   score:4
+// },{
+//   name:"Aditya",
+//   score:3
+// }]
 
 
 function play(question,answer){
 var userAnswer = readlineSync.question(chalk.yellow(question))
-if (userAnswer.isUpperCase===answer.isUpperCase) {
+if (userAnswer.toUpperCase()===answer.toUpperCase()) {
   console.log(chalk.greenBright("right!"))
   score++
  
@@ -45,15 +45,15 @@ var questions = [{
   answer:"Kurama"}]
 
   for(i=0; i<questions.length;i++){
-    var currenQuestion = questions[i]
-    play(currenQuestion.question,currenQuestion.answer)
+    var currentQuestion = questions[i];
+    play(currentQuestion.question,currentQuestion.answer)
   }
 
   console.log(chalk.blueBright("WOW! You scored ",score," points"))
 
-  console.log(chalk.red("*** check out highScores ***"))
+  // console.log(chalk.red("*** check out highScores ***"))
   
-  for(i=0;i<scores.length;i++)
-  {
-  console.log(scores[i].name,scores[i].score)
-  }
+  // for(i=0;i<scores.length;i++)
+  // {
+  // console.log(scores[i].name,scores[i].score)
+  // }
